@@ -5,7 +5,7 @@
 pthread_mutex_t mutex;
 pthread_cond_t readCondition, writeCondition;
 int sharedResource = 0;
-int readerCount = 0;
+int readerCount = 0; // Reader is 0
 
 void *reader(void *arg) {
     int readerId = *(int*)arg;
